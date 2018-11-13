@@ -1,0 +1,17 @@
+.header-section .search-cont {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(39, 39, 39, 0.3);
+    cursor: pointer;
+}
+
+.header-section .search-cont i {
+    color: white;
+    font-size: 20px;
+}

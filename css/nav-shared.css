@@ -1,0 +1,187 @@
+
+/*
+|-----------------------------------------------------------------------------------------------------------
+| Main Nav Widget 
+|-----------------------------------------------------------------------------------------------------------
+*/
+
+.nav-primary,
+.nav-industry,
+.utils {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-primary .primary-item {
+    margin-right: 30px;
+}
+
+.nav-primary .primary-item:last-child {
+    margin-right: 0;
+}
+
+.nav-primary .primary-item > a {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1100px) {
+    .nav-primary .primary-item > a {
+        font-size: 17px;
+    }
+}
+
+.nav-industry {
+    margin-right: 30px;
+}
+
+.nav-industry .ind-item {
+    position: relative;
+    margin-right: 20px;
+}
+
+.nav-industry .ind-item:last-child {
+    margin-right: 0;
+}
+
+.nav-industry .ind-item a {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.nav-industry .ind-item .dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    min-width: 180px;
+    background-color: white;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-industry .ind-item.has-submenu:hover .dropdown {
+    display: block;
+}
+
+.nav-industry .ind-item.has-submenu:hover > .dropdown-support {
+    z-index: 100000;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 100%;
+    min-width: 200px;
+    height: 25px;
+    transform: scaleY(0) translateX(-50%);
+    transition: transform 1s;
+    transform-origin: bottom;
+}
+
+.nav-industry .ind-item.has-submenu > a:hover + .dropdown-support {
+    transform: scaleY(1) translateX(-50%);
+    transition: none;
+    z-index: 1
+}
+
+.nav-industry .ind-item .dropdown li {
+    border-bottom: 1px solid #dbe0e4;
+    text-align: center;
+}
+
+.nav-industry .ind-item .dropdown li:last-child {
+    border: 0;
+}
+
+.nav-industry .ind-item .dropdown li a {
+    display: block;
+    color: #1072ba;
+    text-transform: none;
+}
+
+.header-section .utils .util-item {
+    margin-right: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.header-section .utils .util-item a {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+.header-section .utils .util-item:last-child {
+    margin-right: 0;
+}
+
+.header-section .utils .util-item.blog {
+    padding: 5px 7px;
+    border-radius: 22px;
+    background-color: white;
+    color: #1072ba;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.header-section .utils .util-item.plan {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.header-section .utils .util-item.plan i {
+    margin-right: 5px;
+}
+
+.header-section .utils .weather-cont {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.header-section .utils .weather-cont i {
+    font-size: 19px;
+    color: #e9a32e;
+    margin-right: 5px;
+}
+
+.header-section .translate-cont {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.header-section .translate-cont .fa-globe {
+    font-size: 19px;
+    margin-right: 5px;
+}
+
+/*
+|-----------------------------------------------------------------------------------------------------------
+| Interior Nav Widget 
+|-----------------------------------------------------------------------------------------------------------
+*/
+
+/*
+|-----------------------------------------------------------------------------------------------------------
+| Footer Nav Widget 
+|-----------------------------------------------------------------------------------------------------------
+*/
+
+/*
+|-----------------------------------------------------------------------------------------------------------
+| Mobile Nav 
+|-----------------------------------------------------------------------------------------------------------
+*/
