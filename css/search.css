@@ -17,14 +17,41 @@
 }
 
 .header-section .search-panel {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     z-index: 2000;
     background-color: rgba(0,0,0,0.75);
-    display: flex;
     justify-content: center;
     padding-top: 250px;
+}
+
+.header-section .search-panel.active {
+    display: flex;
+}
+
+.header-section .search-panel .close-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header-section .search-panel .close-search i {
+    font-size: 26px;
+    color: #1072ba;
+}
+
+@media (max-width: 1024px) {
+    .header-section .search-cont {
+        display: none;
+    }
 }
