@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(39, 39, 39, 0.3);
+    background-color: rgba(39, 39, 39, 0.45);
     cursor: pointer;
 }
 

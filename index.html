@@ -41,27 +41,61 @@
     <!-- //////  HEADER  SLIDESHOW //////// -->
 
     <section class="header-slideshow">
+        <!-- social links -->
+        <div class="social-icons-main">
+            <a href="/" class="social-icon"><i class="fas fa-wine-glass-alt"></i></a>
+            <a href="/" class="social-icon"><img src="includes/public/assets/images/social-icon-wave.png" alt="wave"></a>
+            <a href="/" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="/" class="social-icon"><i class="fab fa-twitter-square"></i></a>
+            <a href="/" class="social-icon"><i class="fab fa-pinterest-square"></i></a>
+            <a href="/" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="/" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <!-- end social links -->
+        <div class="arrow-cont"></div>
         <div class="home-header">
             <div class="item">
-                <img src="" />
+                <div class="img-cont" style="background:url('includes/public/assets/images/header-slideshow.png')center/cover no-repeat;">
+                    <div class="play-btn">
+                        <img src="includes/public/assets/images/play-btn.png" alt="Play Video">
+                    </div>
+                </div>
+                <div class="content">
+                    <h2>pismo beach</h2>
+                    <p class="desc">
+                        2Pismo Beach, a classic beach town, is located on California’s famous central coast, half way between San Francisco and Los Angeles along Pacific Coast and 101 Highways.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img-cont" style="background:url('includes/public/assets/images/header-slideshow.png')center/cover no-repeat;"> </div>
+                <div class="content">
+                    <h2>slide number two</h2>
+                    <p class="desc">
+                        2Pismo Beach, a classic beach town, is located on California’s famous central coast, half way between San Francisco and Los Angeles along Pacific Coast and 101 Highways.
+                    </p>
+                </div>
             </div>
         </div>      
     </section>
 
     <script>
         $(document).ready(function(){
-            $('.home-header').slick({
+            var root = $(".header-slideshow");
+            var slider = root.find(".home-header");
+            var arrows = root.find(".arrow-cont");
+
+            slider.slick({
                 infinite: true,
                 arrows: true,
-                dots: true,
-                autoplay: true,
-                fade: true,
-                prevArrow: '<div class="arrow-cont"><div type="button" data-role="none" class="slick-prev" aria-label="previous"><img src="includes/public/assets/images/arrow-prev.png"/></div></div>',
-                nextArrow: '<div class="arrow-cont"><div type="button" data-role="none" class="slick-next" aria-label="next"><img src="includes/public/assets/images/arrow-next.png"/></div></div>'
+                appendArrows: $(arrows),
+                autoplay: false,
+                prevArrow: '<div type="button" data-role="none" class="slick-prev" aria-label="previous"><i class="fas fa-long-arrow-alt-left"></i></div>',
+                nextArrow: '<div type="button" data-role="none" class="slick-next" aria-label="next"><i class="fas fa-long-arrow-alt-right"></i></div>'
             });
 
             $(window).on('resize orientationchange', function() {
-                $('.home-header').slick('resize');
+                slider.slick('resize');
             });
 
         });
@@ -70,7 +104,206 @@
     <!-- //////  BODY  //////// -->
     <section class="body-section">
         <div class="maincont">        
- 
+            <div class="intro-panel">
+                <h1>welcome to pismo beach</h1>
+                <p>
+                    Pismo Beach, a classic beach town, is located on California’s famous central coast, half way between San Francisco and Los Angeles along Pacific Coast and 101 Highways. We offer long white beaches for taking a pleasant stroll or for just enjoying the spectacular views of the Pismo Beach sunset. Enjoy Pismo’s great weather and fabulous area wineries. Prefer a more active vacation? Central Coast Golfing, riding the dunes in a four-wheel ATV, horseback riding, surfing, body boarding, or fishing can all be part of a Pismo Beach vacation. Take a leisurely walk on our award-winning boardwalk adjacent to the Pismo pier. Shop at the Pismo Beach Premium Outlets, and be sure to visit the California Welcome Center while there.
+                </p>
+                <div class="read-more">
+                    <div class="inner">
+                        <span class="notExp">read more</span>
+                        <span class="exp">read less</span>
+                        <div class="btn">
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    window.onload = function(){
+                        var root = document.querySelector(".intro-panel");
+                        var btn = root.querySelector(".read-more");
+                        btn.addEventListener("click", function(){
+                            if(root.classList.contains("active")){
+                                root.classList.remove("active");
+                            }else{
+                                root.classList.add("active");
+                            }
+                        });
+                    }
+                </script>
+            </div><!-- intro panel -->
+            <div class="two-col-slider">
+                <div class="slider controlled-width">
+                    <div class="arrow-cont">
+                        <div class="inner"></div>
+                    </div>
+                    <div class="item">
+                        <div class="img-cont">
+                            <img src="includes/public/assets/images/two-col-slide.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h2>escape the city</h2>
+                            <h6>pismo beach</h6>
+                            <p>
+                                Come celebrate the best that Classic California has to offer, June 2-4, 2017. Enjoy three days of unforgettable events that embrace the love of California’s traditional surfing lifestyle and culture along with exceptional wine and food.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-cont">
+                            <img src="includes/public/assets/images/two-col-slide.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h2>wine, waves &amp; beyond</h2>
+                            <h6>pismo beach</h6>
+                            <p>
+                                Come celebrate the best that Classic California has to offer, June 2-4, 2017. Enjoy three days of unforgettable events that embrace the love of California’s traditional surfing lifestyle and culture along with exceptional wine and food.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                        var root = $(".two-col-slider");
+                        var slider = root.find(".slider");
+                        var arrows = root.find(".arrow-cont .inner");
+
+                        slider.slick({
+                            autoplay: false,
+                            infinite: true,
+                            arrows: true,
+                            appendArrows: $(arrows),
+                            prevArrow: '<div type="button" data-role="none" class="slick-prev" aria-label="previous"><i class="fas fa-long-arrow-alt-left"></i></div>',
+                            nextArrow: '<div type="button" data-role="none" class="slick-next" aria-label="next"><i class="fas fa-long-arrow-alt-right"></i></div>',
+                            slide: ".item",
+                            speed: 1000
+                        });
+                    });
+                </script>
+            </div><!-- two col slider -->
+            <div class="highlight-slider">
+                <div class="arrow-cont">
+                    <div class="inner"></div>
+                    <a href="/" class="view-more">view more</a>
+                </div>
+                <div class="item">
+                    <a href="/">
+                        <div class="img-cont">
+                            <img src="includes/public/assets/images/highlight-slide.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h2>vacation rentals</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="/">
+                        <div class="img-cont">
+                            <img src="includes/public/assets/images/highlight-slide.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h2>rv parks</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="/">
+                        <div class="img-cont">
+                            <img src="includes/public/assets/images/highlight-slide.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h2>lodging specials</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="/">
+                        <div class="img-cont">
+                            <img src="includes/public/assets/images/highlight-slide.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h2>resorts</h2>
+                        </div>
+                    </a>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                        var root = $(".highlight-slider");
+                        var arrows = root.find(".arrow-cont .inner");
+
+                        root.slick({
+                            autoplay: false,
+                            infinite: true,
+                            arrows: true,
+                            appendArrows: $(arrows),
+                            prevArrow: '<div type="button" data-role="none" class="slick-prev" aria-label="previous"><i class="fas fa-long-arrow-alt-left"></i></div>',
+                            nextArrow: '<div type="button" data-role="none" class="slick-next" aria-label="next"><i class="fas fa-long-arrow-alt-right"></i></div>',
+                            slide: ".item",
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            centerMode: true,
+                            centerPadding: "0",
+                            
+                            speed: 500,
+                            responsive: [
+                                {
+                                    breakpoint: 1024,
+                                    settings: {
+                                        slidesToShow: 2
+                                    }
+                                },
+                                {
+                                    breakpoint: 640,
+                                    settings: {
+                                        slidesToShow: 1
+                                    }
+                                }
+                            ]
+                        });
+                    });
+                </script>
+            </div><!-- highlight slider -->
+            <div class="article-imgboxes controlled-width">
+                <div class="title-cont">
+                    <h2>blog</h2>
+                </div>
+                <div class="imgbox-cont">
+                    <div class="article-imgbox">
+                        <div class="img-cont">
+                            <picture>
+                                <source srcset="includes/public/assets/images/blog-img-sm.png" media="(max-width: 640px)">
+                                <img src="includes/public/assets/images/blog-img.png" alt="">
+                            </picture>
+                            <div class="badge">
+                                holidays
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h4>July 4th Fireworks</h4>
+                            <p>
+                                Come celebrate the July 4th Independence Day Holiday in Pismo Beach with music, delicious food and fireworks. <a href="/">read more</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="article-imgbox">
+                        <div class="img-cont">
+                            <picture>
+                                <source srcset="includes/public/assets/images/blog-img-sm.png" media="(max-width: 640px)">
+                                <img src="includes/public/assets/images/blog-img.png" alt="">
+                            </picture>
+                            <div class="badge">
+                                fall in pismo beach
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h4>Fall in Pismo Beach</h4>
+                            <p>
+                                Come celebrate the July 4th Independence Day Holiday in Pismo Beach with music, delicious food and fireworks. <a href="/">read more</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
