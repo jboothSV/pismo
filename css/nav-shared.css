@@ -343,6 +343,36 @@
 |-----------------------------------------------------------------------------------------------------------
 */
 
+.interior-nav {
+    display: none;
+}
+
+@media (min-width: 641px) {
+    .interior-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        display: inline-block;
+        margin: 0;
+        list-style: none;
+        padding: 15px 40px;
+        background-color: #f4f7f8;
+    }
+    .interior-nav li {
+        display: inline-block;
+        position: relative;
+    }
+    .interior-nav li::after {
+        content: "/";
+        margin: 0 3px;
+        color: #1072ba;
+    }
+    .interior-nav li:last-child::after {
+        display: none;
+    }
+}
+
 /*
 |-----------------------------------------------------------------------------------------------------------
 | Footer Nav Widget 

@@ -87,6 +87,7 @@ h1 {
     font-weight: 700;
     line-height: 42px;
     text-transform: uppercase;
+    margin-bottom: 25px;
 }
 h2 {
     color: #1072ba;
@@ -96,6 +97,7 @@ h2 {
     font-weight: 700;
     line-height: 30px;
     text-transform: uppercase;
+    margin-bottom: 25px;
 }
 h3 {
     color: #e9a32e;
@@ -105,6 +107,7 @@ h3 {
     font-weight: 700;
     line-height: 26px;
     text-transform: uppercase;
+    margin-bottom: 20px;
 }
 h4 {
     color: #363b47;
@@ -113,6 +116,7 @@ h4 {
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
+    margin-bottom: 20px;
 }
 h5 {
     color: #1072ba;
@@ -121,6 +125,7 @@ h5 {
     font-style: normal;
     font-weight: 700;
     line-height: 22px;
+    margin-bottom: 15px;
 }
 h6 {
     color: #363b47;
@@ -130,6 +135,7 @@ h6 {
     font-weight: 500;
     line-height: 20px;
     text-transform: uppercase;
+    margin-bottom: 15px;
 }
 h1 > a,
 h2 > a,
@@ -164,26 +170,32 @@ dl {
     h1 {
         font-size: 55px;
         line-height: 55px;
+        margin-bottom: 40px;
     }
     h2 {
         font-size: 48px;
         line-height: 48px;
+        margin-bottom: 40px;
     }
     h3 {
         font-size: 46px;
         line-height: 46px;
+        margin-bottom: 30px;
     }
     h4 {
         font-size: 36px;
         line-height: 36px;
+        margin-bottom: 30px;
     }
     h5 {
         font-size: 32px;
         line-height: 32px;
+        margin-bottom: 20px;
     }
     h6 {
         font-size: 24px;
         line-height: 24px;
+        margin-bottom: 20px;
     }
     p, 
     table tr th, 
@@ -221,334 +233,6 @@ ul { margin-left: 1.8em; }
     color: #7e92a0;
     opacity: 1;
 }
-
-/*---------------------------FORM STYLES---------------------------*/
-/* START RESET FORM STYLING. YOU SHOULDN'T HAVE TO MODIFY ANYTHING TILL CUSTOMIZE SECTION  */
-
-/* The crm-calendar-popup class is added by JS in the header */
-body.crm-calendar-popup  { overflow-y: hidden !important; }
-body.crm-calendar-popup::-webkit-scrollbar { display: none; }
-body.crm-calendar-popup .contentRender { display: none; }
-body.crm-calendar-popup .crm-calendar-parent { padding: 0; margin: 0; background: #fff; }
-body.crm-calendar-popup table { width: 100%; margin-bottom: 0;}
-body.crm-calendar-popup table thead tr th,
-body.crm-calendar-popup table tfoot tr th,
-body.crm-calendar-popup table tfoot tr td,
-body.crm-calendar-popup table tbody tr th,
-body.crm-calendar-popup table tbody tr td,
-body.crm-calendar-popup table tr td {
-    padding: 2px;
-    font-size: 12px;
-}
-body.crm-calendar-popup .lookup-cal,
-body.crm-calendar-popup .lookup-calNav { border: none; }
-body.crm-calendar-popup .lookup-calNav {
-    margin-bottom: 0px;
-    border-bottom: 1px solid #ccc;
-}
-body.crm-calendar-popup .lookup-cal td,
-body.crm-calendar-popup .lookup-calNav td { text-align: center; }
-body.crm-calendar-popup .lookup-close {
-    margin-top: 15px;
-    text-transform: uppercase;
-    padding-bottom: 20px;
-}
-
-/* TARGET CALENDER TRIGGER ON FORMS*/
-.contentRender form.simpleForm a img { margin-bottom: 10px; }
-
-.contentRender form.simpleForm .row textarea,
-.contentRender form.simpleForm .row input { margin-bottom: 10px; }
-.contentRender form.simpleForm .button { display: inline-block; }
-.contentRender form.simpleForm .captcha img,
-.contentRender #sv_submit_event_form img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-}
-.contentRender form.simpleForm .hint,
-.contentRender #sv_submit_event_form .sv_api_hint {
-    display: block;
-    text-align: center;
-}
-.contentRender form.simpleForm .captcha #code,
-.contentRender #sv_submit_event_form #code {
-    width: 200px;
-    display: block;
-    margin: 0 auto;
-    margin-top: -13px;
-}
-.contentRender form.simpleForm .captcha { overflow: hidden; }
-.contentRender form.simpleForm .captcha #capimage { float: left;  margin-top: 10px; margin-right: 8px; }
-.contentRender form.simpleForm .captcha .hint { margin-top: 10px; }
-.contentRender #sv_submit_event_form .svrecurall *,#sv_submit_event_form #recur_show_1 {
-    -moz-transition: opacity .6s;
-    -o-transition: opacity .6s;
-    -transition: opacity .6s;
-    -webkit-transition: opacity .6s;
-}
-.contentRender #sv_submit_event_form select,
-.contentRender #sv_submit_event_form select[size], #sv_submit_event_form select[multiple],
-.contentRender #sv_submit_event_form input[type=text] { padding: 6px; }
-.contentRender #sv_submit_event_form td:not(:first-child) {
-    padding-left: 0;
-    vertical-align: middle;
-}
-.contentRender #sv_submit_event_form table.fileuploads thead th,
-.contentRender #sv_submit_event_form label.recur_menu,
-.contentRender #sv_submit_event_form legend,
-.contentRender #sv_submit_event_form div.datalabel label {
-    font-weight: normal;
-}
-.contentRender #sv_submit_event_form .progress {
-    background: grey;
-    height: 22px;
-    line-height: 18px;
-}
-.contentRender div#sv_submit_event_form.submitEventForm { padding: 0 !important; }
-.contentRender #sv_submit_event_form .svrecurall *,#sv_submit_event_form #recur_show_1{
-    -moz-transition:all .6s;
-    -o-transition:all .6s;
-    transition:all .6s;
-    -webkit-transition:all .6s;
-}
-.contentRender #sv_submit_event_form #customdate_list {padding: 0 !important; }
-.contentRender #sv_submit_event_form #customdate_list table { margin-bottom: 0; border: 1px solid #ddd; }
-.contentRender #sv_submit_event_form #customdate_list table td,
-.contentRender #sv_submit_event_form #customdate_list table tr { border: none; }
-.contentRender #sv_submit_event_form .recur_opt .detailbar { vertical-align: middle; }
-.contentRender #sv_submit_event_form .recur_opt td {padding: 2px 0;}
-.contentRender #sv_submit_event_form input[type=radio]:checked ~ div.recur_opt { max-height: 100%; }
-.contentRender #sv_submit_event_form #recur_opts_99 { overflow: visible !important; }
-.contentRender #sv_submit_event_form .inner_recur_opt,
-.contentRender #sv_submit_event_form label.recur_menu { margin: 0 1.25em ;}
-.contentRender #sv_submit_event_form .inner_recur_opt { padding: 0 1.25em 0 1.25em; }
-.contentRender #sv_submit_event_form #recur_range {
-    margin: 0 1.25em;
-    padding: 0 1.25em 0 1.25em;
-}
-.contentRender #sv_submit_event_form .inner_recur_opt label {
-    height: 50px;
-    line-height: 46px;
-}
-.contentRender #sv_submit_event_form .inner_recur_opt select {
-    border: none;
-    border-radius: 2px;
-    min-width: 60px;
-    padding-right: 24px;
-}
-.contentRender #sv_submit_event_form .svrecurall input[type=text]:not(#customdate) {
-    border: none;
-    border-radius: 2px;
-}
-.contentRender #sv_submit_event_form .svrecurall #customdate {
-    width: 130px;
-    text-align: center;
-    vertical-align: text-top;
-}
-.contentRender #sv_submit_event_form .svrecurall #customdate_btn {
-    padding: 1px .5rem;
-    vertical-align: text-top;
-}
-
-.contentRender form.simpleForm .formCntrls,
-.contentRender form.simpleForm h3 { text-align: center; }
-@media only screen and (min-width: 40.125em) {
-    .contentRender form.simpleForm p.hint,
-    .contentRender form.simpleForm h3 {
-        padding-left: 8px;
-    }
-    .contentRender form.simpleForm p.hint,
-    .contentRender form.simpleForm .captcha,
-    .contentRender form.simpleForm .formCntrls,
-    .contentRender form.simpleForm h3 {
-        margin-left: 25%;
-        text-align: left !important;
-        width: auto;
-    }
-    .contentRender form.simpleForm .columns p.hint {
-        margin: 8px 0 10px 0;
-        padding-left: 0px;
-    }
-    .contentRender form.simpleForm .captcha img,
-    .contentRender form.simpleForm .captcha #code { margin-left: 0; }
-    .contentRender form.simpleForm .hint { text-align: left; }
-}
-.contentRender form.simpleForm .button,
-.contentRender #sv_submit_event_form input.button,
-.contentRender #sv_submit_event_form .svbtn,
-.contentRender #multifileuploadcontainer label {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    -ms-box-shadow: none;
-    -o-box-shadow: none;
-    box-shadow: none;
-    box-shadow: none;
-}
-.contentRender form.simpleForm .button,
-.contentRender #sv_submit_event_form input.button,
-.contentRender #sv_submit_event_form .svbtn,
-.contentRender #multifileuploadcontainer label {
-    border-radius: 0px;
-}
-.contentRender form.simpleForm h3,
-.contentRender #sv_submit_event_form .formhead {
-    background-color: transparent;
-}
-.contentRender form.simpleForm .button,
-.contentRender #sv_submit_event_form input.button,
-.contentRender #sv_submit_event_form .svbtn,
-.contentRender #multifileuploadcontainer label {
-    background: none;
-    border: none;
-}
-.contentRender form.simpleForm div input,
-.contentRender #sv_submit_event_form div input {
-    border-radius: initial;
-}
-/* END RESET */
-
-/* CUSTOMIZE THE FOLLOWING */
-
-/* RESET FONT FAMILY */
-.contentRender #sv_submit_event_form legend,
-.contentRender form.simpleForm label,
-.contentRender form.simpleForm .formtext,
-.contentRender form.simpleForm input,
-.contentRender form.simpleForm select,
-.contentRender #sv_submit_event_form .recur_opt input[type=checkbox] ~ label.minilabel,
-.contentRender #sv_submit_event_form .recur_opt input[type=radio] ~ label.minilabel,
-.contentRender #sv_submit_event_form table.fileuploads thead th,
-.contentRender #sv_submit_event_form select,
-.contentRender #sv_submit_event_form select[size], #sv_submit_event_form select[multiple],
-.contentRender #sv_submit_event_form input[type=text],
-.contentRender #sv_submit_event_form div.datalabel label,
-.contentRender #sv_submit_event_form label.recur_menu {
-    font-family: 'futura-pt', sans-serif;
-}
-/* RESET FONT STYLE */
-.contentRender form.simpleForm .columns label,
-.contentRender form.simpleForm .formtext,
-.contentRender #sv_submit_event_form #customdate_list .formhead,
-.contentRender #sv_submit_event_form table.fileuploads thead th,
-.contentRender #sv_submit_event_form select,
-.contentRender #sv_submit_event_form select[size], #sv_submit_event_form select[multiple],
-.contentRender #sv_submit_event_form input[type=text],
-.contentRender #sv_submit_event_form div.datalabel label {
-    color: #565555;
-    font-size: 18px;
-    line-height: 28px;
-}
-/* OPTIONAL RESET FOR INPUT STYLE */
-/* This over-writes foundation style. Double check your select boxes. You may have to adjust the line-height to vertically center text */
-.contentRender form.simpleForm input,
-.contentRender form.simpleForm select,
-.contentRender #sv_submit_event_form select,
-.contentRender #sv_submit_event_form select[size], #sv_submit_event_form select[multiple],
-.contentRender #sv_submit_event_form input[type=text] {
-    background-color: #fff;
-    height: 40px;
-    line-height: 40px;
-    font-size: 18px;
-    color: #c74d28;
-    padding: 0 15px;
-    margin-bottom: 20px;
-}
-/* REPLACE WITH A CORE STYLE HEADING */
-.contentRender form.simpleForm h3,
-.contentRender #sv_submit_event_form .formhead {
-    color: #509e2f;
-    font-size: 36px;
-    line-height: 32px;
-    font-weight: 400;
-    font-family: 'mrs-eaves', serif;
-    font-style: italic;
-}
-/* SET KEY COLOR HERE */
-.contentRender #sv_submit_event_form .recur_opt input[type=checkbox]:checked ~ label,
-.contentRender #sv_submit_event_form .recur_opt input[type=radio]:checked ~ label,
-.contentRender #sv_submit_event_form #recur_range input[type=checkbox]:checked ~ label,
-.contentRender #sv_submit_event_form #recur_range input[type=radio]:checked ~ label,
-.contentRender #sv_submit_event_form input[type=radio]:checked ~ label.recur_menu,
-.contentRender #sv_submit_event_form .progress {
-    border: none;
-    background-color: #509e2f;
-    /*height: 40px;
-    line-height: 40px;
-    font-size: 18px;*/
-    color: #fff;
-    /*padding: 0 45px;
-    margin-bottom: 20px;*/
-}
-/* STRONG WEIGHT FOR LABELS */
-.contentRender #sv_submit_event_form #customdate_list .formhead,
-.contentRender #sv_submit_event_form legend {
-    font-weight: 600;
-    font-size: 25px;
-}
-/* STYLE SUBMIT BUTTONS */
-.contentRender form.simpleForm .button,
-.contentRender #sv_submit_event_form input.button,
-.contentRender #sv_submit_event_form .svbtn,
-.contentRender #multifileuploadcontainer label {
-    background-color: #dc582a !important;
-    width: auto;
-    margin: 0;
-    color: #fff;
-}
-.contentRender form.simpleForm .button:hover,
-.contentRender form.simpleForm .button:active,
-.contentRender #sv_submit_event_form input.button:hover,
-.contentRender #sv_submit_event_form input.button:active,
-.contentRender #sv_submit_event_form .svbtn:hover,
-.contentRender #sv_submit_event_form .svbtn:active,
-.contentRender #multifileuploadcontainer label:hover,
-.contentRender #multifileuploadcontainer label:active {
-    opacity: 0.8;
-}
-/* SET LINK COLOR HERE */
-body.crm-calendar-popup .contentRender a, body.crm-calendar-popup .contentRender a:hover {
-    /*
-        This is a generic link style for the calendar popup.
-
-        It's recommended you test the calendar popup but you might wanna limit your style here to color and family.
-        The font size should be able to work across all sites.
-    */
-    /*font-size: 1.0625rem;
-    font-style: normal;*/
-}
-/* OPTIONAL: SET FORM HINT STYLE HERE */
-.contentRender #sv_submit_event_form .hint,
-.contentRender form.simpleForm p.hint:not(.formreq) {
-    /* Default styling here. Changing is optional */
-    /*color: #5b5b5b;
-    font-size: 14px;*/
-}
-/* OPTIONAL: SET FORM REQUIRED STYLE HERE */
-.contentRender #sv_submit_event_form div.datalabel label.svformreq,
-.contentRender form.simpleForm label.formreq {
-    /*color: #d81111;*/
-}
-/* SUBMIT EVENT FORM PIKA CALENDAR */
-/* To test, click on the start date in a submit event form */
-.pika-lendar .is-today .pika-button {
-    /*
-        Set a link color here. This can be standard site anchor color
-    */
-}
-.pika-lendar .pika-button:hover,
-.pika-lendar .is-selected .pika-button {
-    /*
-        Set your hover/selected background and text color here.
-        Note the Pika calendar uses important here so this is required to overwrite.
-    */
-    /*color: #fff;
-    background: #a49483 !important;
-    border-radius: 0 !important;
-    box-shadow: none;*/
-}
-/*---------------------------END FORM STYLES---------------------------*/
 
 /*
 |-----------------------------------------------------------------------------------------------------------
@@ -637,6 +321,12 @@ body.crm-calendar-popup .contentRender a, body.crm-calendar-popup .contentRender
 .controlled-width {
     width: 100%;
     max-width: 1170px;
+    margin: 0 auto;
+}
+
+.controlled-width-narrow {
+    width: 100%;
+    max-width: 990px;
     margin: 0 auto;
 }
 
@@ -792,6 +482,65 @@ body.crm-calendar-popup .contentRender a, body.crm-calendar-popup .contentRender
         width: 50%;
         font-size: 65px;
         line-height: 70px;
+    }
+}
+
+.panel-one-col,
+.panel-two-col-even {
+    padding-bottom: 40px;
+}
+
+.panel-one-col .panel-one-col,
+.panel-one-col .panel-two-col-even,
+.panel-two-col-even .panel-two-col-even {
+    padding-bottom: 0;
+}
+
+.custom-row {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.custom-col {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+}
+
+@media (min-width: 641px) {
+    .panel-one-col,
+    .panel-two-col-even {
+        padding-bottom: 65px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .panel-one-col,
+    .panel-two-col-even {
+        padding-bottom: 100px;
+    }
+}
+
+.stnd-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid #e9a32e;
+    border-radius: 25px;
+    color: #e9a32e !important;
+    transition: all 0.5s;
+}
+
+@media (min-width: 1025px) {
+    .stnd-btn {
+        padding: 18px 58px;
+        border-radius: 35px;
+    }
+    .stnd-btn:hover {
+        color: white !important;
+        background-color: #e9a32e;
+        border-radius: 5px;
     }
 }
 

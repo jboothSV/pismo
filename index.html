@@ -303,7 +303,184 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><!-- article imgboxes -->
+            <div class="feat-slider">
+                <div class="title-cont">
+                    <h2>events</h2>
+                </div>
+                <div class="slider">
+                    <div class="slider-inner controlled-width">
+                        <div class="arrow-cont"></div>
+                        <div class="item">
+                            <div class="img-cont">
+                                <img src="includes/public/assets/images/feat-slide.png" alt="">
+                                <div class="date-block" style="background-color: #1072ba;"><!-- css nth-child selector not working on cloned slides -->
+                                    <span>jul</span>
+                                    <span>8</span>
+                                </div>
+                                <div class="times" style="background-color: #1072ba;">
+                                    1:00pm-4:00pm
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h5>pacific breeze concert</h5>
+                                <h6>dinosaur caves park</h6>
+                                <div class="content-bottom">
+                                    <span>July 8, 2018</span>
+                                    <a href="/">View Details<i class="fas fa-caret-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-cont">
+                                <img src="includes/public/assets/images/feat-slide.png" alt="">
+                                <div class="date-block" style="background-color: #e9a32e;">
+                                    <span>jul</span>
+                                    <span>8</span>
+                                </div>
+                                <div class="times" style="background-color: #e9a32e;">
+                                    1:00pm-4:00pm
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h5>pacific breeze concert</h5>
+                                <h6>dinosaur caves park</h6>
+                                <div class="content-bottom">
+                                    <span>July 8, 2018</span>
+                                    <a href="/">View Details<i class="fas fa-caret-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-cont">
+                                <img src="includes/public/assets/images/feat-slide.png" alt="">
+                                <div class="date-block" style="background-color: #1072ba;">
+                                    <span>jul</span>
+                                    <span>8</span>
+                                </div>
+                                <div class="times" style="background-color: #1072ba;">
+                                    1:00pm-4:00pm
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h5>pacific breeze concert</h5>
+                                <h6>dinosaur caves park</h6>
+                                <div class="content-bottom">
+                                    <span>July 8, 2018</span>
+                                    <a href="/">View Details<i class="fas fa-caret-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-cont">
+                                <img src="includes/public/assets/images/feat-slide.png" alt="">
+                                <div class="date-block" style="background-color: #e9a32e;">
+                                    <span>jul</span>
+                                    <span>8</span>
+                                </div>
+                                <div class="times" style="background-color: #e9a32e;">
+                                    1:00pm-4:00pm
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h5>pacific breeze concert</h5>
+                                <h6>dinosaur caves park</h6>
+                                <div class="content-bottom">
+                                    <span>July 8, 2018</span>
+                                    <a href="/">View Details<i class="fas fa-caret-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-cont">
+                                <img src="includes/public/assets/images/feat-slide.png" alt="">
+                                <div class="date-block" style="background-color: #1072ba;">
+                                    <span>jul</span>
+                                    <span>8</span>
+                                </div>
+                                <div class="times" style="background-color: #1072ba;">
+                                    1:00pm-4:00pm
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h5>pacific breeze concert</h5>
+                                <h6>dinosaur caves park</h6>
+                                <div class="content-bottom">
+                                    <span>July 8, 2018</span>
+                                    <a href="/">View Details<i class="fas fa-caret-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all">
+                    <a href="/">
+                        view all events
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                    </a>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                        var root = $(".feat-slider");
+                        var slider = root.find(".slider-inner");
+                        var arrows = root.find(".arrow-cont");
+
+                        slider.slick({
+                            autoplay: false,
+                            infinite: true,
+                            arrows: true,
+                            appendArrows: $(arrows),
+                            prevArrow: '<div type="button" data-role="none" class="slick-prev" aria-label="previous"><i class="fas fa-long-arrow-alt-left"></i></div>',
+                            nextArrow: '<div type="button" data-role="none" class="slick-next" aria-label="next"><i class="fas fa-long-arrow-alt-right"></i></div>',
+                            slide: ".item",
+                            slidesToShow: 4,
+                            slidesToScroll: 1,
+                            responsive: [
+                                {
+                                    breakpoint: 1024,
+                                    settings: {
+                                        slidesToShow: 3
+                                    }
+                                },
+                                {
+                                    breakpoint: 640,
+                                    settings: {
+                                        slidesToShow: 1
+                                    }
+                                }
+                            ]
+                        });
+                    });
+                </script>
+            </div><!-- featured slider -->
+            <div class="map-panel">
+                <style>
+                    .map-panel {
+                        margin-bottom: 40px;
+                    }
+                    @media (min-width: 1025px) {
+                        .map-panel {
+                            margin-bottom: 100px;
+                        }
+                    }
+                </style>
+                <img class="hide-for-small-only" src="includes/public/assets/images/int-map.png" alt="" style="display:block;width:100%;">
+                <img class="show-for-small-only" src="includes/public/assets/images/int-map-sm.png" alt="" style="display:block;width:100%;">
+            </div><!-- map panel -->
+            <div class="social-panel">
+                    <style>
+                        .social-panel {
+                            margin-bottom: 40px;
+                        }
+                        @media (min-width: 1025px) {
+                            .social-panel {
+                                margin-bottom: 100px;
+                            }
+                        }
+                    </style>
+                <img class="hide-for-small-only" src="includes/public/assets/images/social-panel.png" alt="" style="display:block;width:100%;">
+                <img class="show-for-small-only" src="includes/public/assets/images/social-panel-sm.png" alt="" style="display:block;width:100%;">
+            </div><!-- social panel -->
         </div>
     </section>
 
