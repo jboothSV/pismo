@@ -92,11 +92,13 @@
 .header-slideshow .slick-next,
 .header-slideshow .slick-prev {
     background-color: white;
+    width: 45px;
+    height: 45px;
 }
 
 .header-slideshow .slick-next i,
 .header-slideshow .slick-prev i {
-    color: #63737f;
+    color: #1072ba;
 }
 
 .header-slideshow .slick-prev {

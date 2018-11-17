@@ -16,6 +16,7 @@
 .vguide .item-wrapper,
 .enews .item-wrapper {
     display: flex;
+    align-items: flex-start;
 }
 
 .vguide,
@@ -55,6 +56,7 @@
 .enews .content h6 {
     color: white;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .vguide .content h5,

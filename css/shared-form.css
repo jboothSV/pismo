@@ -24,6 +24,7 @@
 	color: #7e92a0;
     padding: 0 15px;
     border-radius: 4px;
+    box-shadow: 0px 0px;
 }
 
 .header-section .shared-input,
@@ -48,6 +49,7 @@
     justify-content: center;
     background-color: #e9a32e;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .shared-submit i {
@@ -68,5 +70,29 @@
     height: 40px;
     width: 50px;
     margin-left: 5px;
+}
+
+.filters .shared-input,
+.filters .shared-input[type] {
+    flex: 4;
+    margin: 0;
+    height: inherit;
+    line-height: 35px;
+    margin-right: 5px;
+    padding: 0 15px;
+}
+
+.filters .shared-input:focus,
+.filters .shared-input[type]:focus {
+    background: white;
+    border-color: transparent;
+}
+
+.filters .shared-submit {
+    flex: 1;
+}
+
+.filters .shared-form {
+    height: 35px;
 }
 

@@ -453,6 +453,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: all;
 }
 
 .mobilenav .hamburger i {
@@ -479,8 +480,9 @@
     right: 0;
     width: 100%;
     max-width: 320px;
-    padding: 15px 0;
-    background: rgba(0,0,0,0.85);
+    padding: 20px 0;
+    background: rgba(39,39,39,0.95);
+    pointer-events: all;
 }
 
 .mobilenav.active .mobile-dd {

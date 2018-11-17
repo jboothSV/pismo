@@ -64,6 +64,7 @@ body {
     background-color: white;
     font-family: 'Roboto', sans-serif;
     color: #363b47;
+    overflow-x: hidden;
 }
 .wrapper {
     position: relative;
@@ -244,7 +245,7 @@ ul { margin-left: 1.8em; }
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 1020;
     height: 90px;
     width: 100%;
     margin: 0 auto;
@@ -330,6 +331,17 @@ ul { margin-left: 1.8em; }
     margin: 0 auto;
 }
 
+.controlled-width.listings {
+    max-width: 875px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1025px) {
+    .controlled-width.listings {
+        margin: 0 auto 0 10%;
+    }
+}
+
 /* slick arrows */
 
 .slick-prev,
@@ -365,7 +377,7 @@ ul { margin-left: 1.8em; }
     position: relative;
     width: 100%;
     max-width: 1100px;
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
     padding: 0 15px 60px;
     max-height: 425px;
     overflow: hidden;
@@ -582,18 +594,19 @@ ul { margin-left: 1.8em; }
 }
 
 .footer-section .address ul li {
-    line-height: 24px;
+    line-height: 20px;
 }
 
 .footer-section .address ul a {
     color: white;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .footer-section .address h6 {
     color: white;
     font-size: 17px;
+    margin: 0;
 }
 
 .footer-section .blog-link {
