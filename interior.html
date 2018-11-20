@@ -16,7 +16,6 @@
     <link href="css/social.css" rel="stylesheet" type="text/css" />
     <link href="css/shared-form.css" rel="stylesheet" type="text/css" />
     <link href="css/add-this.css" rel="stylesheet" type="text/css" />
-    <link href="css/collections.css" rel="stylesheet" type="text/css" />
     <link href="css/vguide-enews.css" rel="stylesheet" type="text/css" />
 
     <script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
@@ -70,16 +69,161 @@
                 </ul>
                 <a href="/" class="add-this">Share<i class="fas fa-share"></i></a>
             </div>
-            <div class="panel-one-col controlled-width-narrow">
-                <div class="custom-row">
-                    <div class="custom-col">
-                        <h1>pismo beach wine</h1>
-                        <p>
-                            Pismo Beach offers the perfect pairing of wine and waves in a warm and inviting atmosphere. Beautiful beaches and a taste of California wine country are at your fingertips with oceanfront resorts and distinct restaurants. Visitors can learn about the local culture and discover new grape varieties produced here in the historic winemaking regions of Edna valley, Arroyo Grande and Avila Valley all of which are located just 30 minutes outside of downtown Pismo Beach and local area attractions. Our wine country offers a refreshing perspective on artisanal winemaking by some of the most respected winemakers in California. Additionally, Pismo Beach restaurants feature locally grown wine county inspired cuisine to be perfectly paired with their extensive wine lists and cellar collections.
-                        </p>
-                    </div>
-                </div>
-            </div><!-- panel one col -->
+            <div class="contentRender_name_plugins_core_textbox controlled-width-narrow">
+                <h1>pismo beach wine</h1>
+                <p>
+                    Pismo Beach offers the perfect pairing of wine and waves in a warm and inviting atmosphere. Beautiful beaches and a taste of California wine country are at your fingertips with oceanfront resorts and distinct restaurants. Visitors can learn about the local culture and discover new grape varieties produced here in the historic winemaking regions of Edna valley, Arroyo Grande and Avila Valley all of which are located just 30 minutes outside of downtown Pismo Beach and local area attractions. Our wine country offers a refreshing perspective on artisanal winemaking by some of the most respected winemakers in California. Additionally, Pismo Beach restaurants feature locally grown wine county inspired cuisine to be perfectly paired with their extensive wine lists and cellar collections.
+                </p>
+            </div><!-- textbox -->
+            <style>
+                .feat-imgbox {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 25px 15px 0;
+                    width: 100%;
+                    max-width: 1060px;
+                    margin: 0 auto 25px;
+                }
+
+                .feat-imgbox .img-cont {
+                    position: relative;
+                    margin-bottom: 35px;
+                    box-shadow: -14px 11px 95px -34px rgba(0,0,0,0.73);
+                    height: 100%;
+                }
+
+                .feat-imgbox .img-cont img {
+                    display: block;
+                    width: 100%;
+                }
+
+                .feat-imgbox.feat-imgbox.alternate .img-cont {
+                    padding: 0 15px;
+                    margin-bottom: 25px;
+                    box-shadow: 0px 0px;
+                }
+
+                .feat-imgbox.feat-imgbox.alternate .img-cont::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 15px;
+                    width: calc(100% - 30px);
+                    height: 100%;
+                    box-shadow: -14px 11px 95px -34px rgba(0,0,0,0.73);
+                }
+
+                .feat-imgbox .img-cont::after {
+                    content: "";
+                    position: absolute;
+                    left: 30px;
+                    top: -25px;
+                    width: 30%;
+                    height: calc(100% + 50px);
+                    z-index: -1;
+                    background: url("includes/public/assets/images/lines.svg")center/cover no-repeat;
+                }
+
+                .feat-imgbox.alternate .img-cont::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 30px;
+                    top: auto;
+                    height: 30%;
+                    width: 100%;
+                    z-index: -1;
+                    background: url("includes/public/assets/images/lines-alt.png")center/contain no-repeat;
+                }
+
+                .feat-imgbox .content h3 {
+                    font-size: 30px;
+                    line-height: 36px;
+                    margin: 0;
+                }
+
+                .feat-imgbox .content p {
+                    margin-bottom: 25px;
+                }
+
+                .feat-imgbox.alternate .content {
+                    text-align: right;
+                }
+
+                @media (min-width: 641px) {
+                    .feat-imgbox {
+                        flex-direction: row;
+                    }
+                    .feat-imgbox .img-cont {
+                        width: auto;
+                        margin: 0 auto;
+                    }
+                    .feat-imgbox .content {
+                        width: 50%;
+                    }
+                    .feat-imgbox.alternate .img-cont {
+                        order: 2;
+                    }
+                    .feat-imgbox .content {
+                        padding-left: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                    .feat-imgbox.alternate .content {
+                        padding-right: 15px;
+                    }
+                    .feat-imgbox .content h6 {
+                        font-size: 20px;
+                        line-height: 24px;
+                        margin-bottom: 10px;
+                    }
+                    .feat-imgbox .content p {
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin-bottom: 15px;
+                    }
+                    .feat-imgbox .content .stnd-btn {
+                        margin-right: auto;
+                        align-self: flex-start;
+                    }
+                    .feat-imgbox.alternate .content .stnd-btn {
+                        margin-left: auto;
+                        margin-right: 0;
+                        align-self: flex-end;
+                    }
+                }
+
+                @media (min-width: 1025px) {
+                    .feat-imgbox {
+                        margin-bottom: 85px;
+                    }
+                    .feat-imgbox .content {
+                        padding-left: 50px;
+                        padding-right: 15px;
+                    }
+                    .feat-imgbox.alternate .content {
+                        padding-right: 50px;
+                        padding-left: 15px;
+                    }
+                    .feat-imgbox .content h3 {
+                        font-size: 48px;
+                        line-height: 56px;
+                    }
+                    .feat-imgbox .content h6 {
+                        font-size: 24px;
+                    }
+                    .feat-imgbox .content p {
+                        line-height: 28px;
+                        margin-bottom: 20px;
+                    }
+                    .feat-imgbox.alternate .img-cont::after {
+                        width: 115%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            </style>
             <div class="feat-imgbox">
                 <div class="img-cont">
                     <img src="includes/public/assets/images/feat-imgbox.png" alt="">
@@ -107,6 +251,83 @@
                 </div>
             </div><!-- featured imgbox -->
             <div class="video-box">
+                <style>
+                    .video-box {
+                        position: relative;
+                        margin-bottom: 40px;
+                    }
+
+                    .video-box .img-cont {
+                        position: relative;
+                    }
+
+                    .video-box .img-cont .play-btn {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 55px;
+                        cursor: pointer;
+                    }
+
+                    .video-box .img-cont .play-btn img {
+                        display: block;
+                        width: 100%;
+                    }
+
+                    .video-box .img-cont::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 10px;
+                        background-color: #dfe6ea;
+                    }
+
+                    .video-box .content {
+                        padding: 15px;
+                        background-color: white;
+                    }
+
+                    .video-box .content h2 {
+                        margin-bottom: 10px;
+                    }
+
+                    @media (min-width: 641px) {
+                        .video-box .content h2 {
+                            font-size: 30px;
+                            line-height: 30px;
+                        }
+                        .video-box .content p {
+                            font-size: 16px;
+                            line-height: 24px;
+                            margin: 0;
+                        }
+                    }
+
+                    @media (min-width: 1025px) {
+                        .video-box {
+                            padding-bottom: 100px;
+                            margin-bottom: 125px;
+                        }
+                        .video-box .content {
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            width: 45%;
+                            padding: 25px 35px;
+                            border-top-left-radius: 8px;
+                            box-shadow: -14px 11px 95px -34px rgba(0,0,0,0.73);
+                        }
+                        .video-box .img-cont .play-btn {
+                            width: 85px;
+                        }
+                        .video-box .img-cont::after {
+                            height: 20px;
+                        }
+                    }    
+                </style>
                 <div class="img-cont">
                     <picture>
                         <source srcset="includes/public/assets/images/video-box-sm.png" media="(max-width:640px)">
@@ -124,6 +345,152 @@
                 </div>
             </div><!-- video box -->
             <div class="nav-slider">
+                <style>
+                    .nav-slider {
+                        margin-bottom: 40px;
+                    }
+
+                    .shared-detail .nav-slider {
+                        margin-bottom: 0;
+                    }
+
+                    .nav-slider .title-cont {
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+
+                    .nav-slider .title-cont h2 {
+                        position: relative;
+                        display: inline-block;
+                        padding: 0 25px;
+                        font-size: 40px;
+                        font-weight: 700;
+                        line-height: 44px;
+                        margin: 0;
+                    }
+
+                    .nav-slider .title-cont h2::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100%;
+                        height: 12px;
+                        border-radius: 15px;
+                        background-color: #fcf6e9;
+                        z-index: -1;
+                    }
+
+                    .nav-slider .slider {
+                        position: relative;
+                        padding: 20px 0 60px;
+                        max-width: 1180px;
+                    }
+
+                    .nav-slider .slider::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        height: 100%;
+                        width: 50%;
+                        max-width: 165px;
+                        background-color: #fcf6e9;
+                        z-index: -1;
+                    }
+
+                    .nav-slider .slider .arrow-cont {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+                        padding-bottom: 12px;
+                    }
+
+                    .nav-slider .slider .arrow-cont .inner {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .nav-slider .slider .arrow-cont .slick-prev,
+                    .nav-slider .slider .arrow-cont .slick-next {
+                        background-color: #e9a32e;
+                    }
+
+                    .nav-slider .slider .arrow-cont .slick-prev i,
+                    .nav-slider .slider .arrow-cont .slick-next i {
+                        color: white;
+                    }
+
+                    .nav-slider .slider .arrow-cont .slick-prev {
+                        margin-right: 15px;
+                    }
+
+                    .nav-slider .slider .slick-list {
+                        padding-top: 10px;
+                    }
+
+                    .nav-slider .item {
+                        position: relative;
+                        margin-bottom: 15px;
+                        padding: 0 15px;
+                    }
+
+                    .nav-slider .item .img-cont {
+                        position: relative;
+                        padding: 8px;
+                        background-color: white;
+                        border-radius: 8px;
+                        box-shadow: -4px 8px 22px -3px rgba(0,0,0,0.15), 4px -2px 22px -3px rgba(0,0,0,0.15);
+                    }
+
+                    .nav-slider .item .img-cont::after {
+                        content: "";
+                        position: absolute;
+                        top: 8px;
+                        left: 8px;
+                        width: calc(100% - 16px);
+                        height: calc(100% - 16px);
+                        border-radius: 8px;
+                        background: rgba(0,0,0,0.2);
+                    }
+
+                    .nav-slider .item .img-cont img {
+                        display: block;
+                        width: 100%;
+                        border-radius: 8px;
+                    }
+
+                    .nav-slider .item .title {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    .nav-slider .item .title h3 {
+                        color: white;
+                        margin: 0;
+                        font-size: 26px;
+                        line-height: 26px;
+                    }
+
+                    @media (min-width: 1025px) {
+                        .nav-slider {
+                            margin-bottom: 100px;
+                        }
+                        .nav-slider .title-cont h2 {
+                            font-size: 56px;
+                            line-height: 66px;
+                        }
+                    }    
+                </style>
                 <div class="title-cont">
                     <h2>explore</h2>
                 </div>

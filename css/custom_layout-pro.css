@@ -23,6 +23,16 @@ h4.no-results{
     position: relative;
 }
 
+.shared-list {
+    margin-bottom: 60px;
+}
+
+@media (min-width: 1025px) {
+    .shared-list {
+        margin-bottom: 100px;
+    }
+}
+
 /* Custom styled checkboxes */
 
 input[type="checkbox"]:not(:checked),

@@ -41,6 +41,20 @@
     font-weight: 400;
 }
 
+.shared-detail .social-icons {
+    justify-content: center;
+}
+
+.shared-detail .social-icon {
+    font-size: 33px;
+    font-weight: normal;
+    margin-right: 25px;
+}
+
+.shared-detail .social-icons .social-icon:last-child {
+    margin-right: 0;
+}
+
 @media (min-width: 641px) and (max-width: 1024px) {
     .footer-section .social-icons.tablet-only {
         display: flex;

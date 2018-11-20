@@ -9,9 +9,7 @@
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/themes/smoothness/jquery-ui.css" rel="stylesheet">
     <link href="css/foundation.min.css" rel="stylesheet" type="text/css">
     <link href="css/fontawesome.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick-theme.css">
     <link href="css/shared.css" rel="stylesheet" type="text/css">
     <link href="css/search.css" rel="stylesheet" type="text/css">
     <link href="css/slideshow-int.css" rel="stylesheet" type="text/css">
@@ -19,7 +17,6 @@
     <link href="css/add-this.css" rel="stylesheet" type="text/css">
     <link href="css/shared-form.css" rel="stylesheet" type="text/css">
     <link href="css/social.css" rel="stylesheet" type="text/css">
-    <link href="css/collections.css" rel="stylesheet" type="text/css" />
     <link href="css/vguide-enews.css" rel="stylesheet" type="text/css" />
     <link href="css/custom_detail.css" rel="stylesheet" type="text/css">
 
@@ -32,8 +29,7 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js"></script>
 
     <!-- CUSTOM FONTS CODE -->
-
-<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Roboto:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Roboto:400,500,700" rel="stylesheet">
 </head>
 
 <body>
@@ -46,8 +42,7 @@
 
             <div class="maincont">
 
-                <div class="panel-one-col">
-                    <div class="header-background"></div>
+                    <div class="header-background" style="background:url('includes/public/assets/images/hdr-detail.jpg')center/cover no-repeat;"></div>
                     <!-- START LISTINGS -->
                     <div class="listings shared-detail" data-guid="{{guid}}">
 
@@ -71,11 +66,8 @@
 
                                 <div class="details">
                                     <div class="details-inner">
-                                        <div class="share">
-                                            <a class="add-this" href="/">
-                                                Share
-                                                <i class="fas fa-share"></i>
-                                            </a>
+                                        <div class="add-this-panel">
+                                            <a href="/" class="add-this">Share<i class="fas fa-share"></i></a>
                                         </div>
                                         <h2>Oxford Suites</h2>
                                         <ul class="info">
@@ -89,43 +81,6 @@
                                         </ul>
 
                                         <div class="detail-social">
-                                            <style>
-                                            .detail-social {
-                                                padding: 10px 0;
-                                            }
-                                            .shared-top .social-icons {
-                                                display: flex;
-                                                justify-content: center;
-                                            }
-                                            .shared-top .social-icons .social-icon {
-                                                display: inline-flex;
-                                                justify-content: center;
-                                                align-items: center;
-                                                border: none;
-                                                font-size: 30px;
-                                                color: #1072ba;
-                                                margin-right: 18px;
-                                                }
-
-                                                @media (min-width: 641px) {
-                                                    .detail-social {
-                                                        padding: 10px 0 0 0;
-                                                        display: flex;
-                                                        flex-direction: column;
-                                                    }
-                                                    .shared-top .social-icons {
-                                                        justify-content: flex-start;
-                                                    }
-                                                }
-                                                @media (min-width: 1025px) {
-                                                    .detail-social {
-                                                    	display: flex;
-                                                	}
-                                                    .shared-top .social-icons .social-icon {
-                                                        margin-right: 28px;
-                                                    }
-                                                }
-                                            </style>
                                             <div class="social-icons">
                                                 <a class="social-icon" href="/">
                                                    <i class="fab fa-facebook"></i>
@@ -228,36 +183,152 @@
                         </div>
                         <!--shared-bottom-->
                         <div class="nav-slider">
-                            <style>
-                                .nav-slider .title-cont {
-                                    margin-bottom: 20px;
-                                }
-                                .nav-slider .title-cont h2 {
-                                    font-weight: 700;
-                                }
-                                .nav-slider .slider .arrow-cont .slick-prev {
-                                    margin-right: -35px;
-                                }
-                                .slick-prev,
-                                .slick-next {
-                                    position: relative;
-                                }
-                                .slick-prev:before,
-                                .slick-next:before {
-                                    content: '';
-                                }
-                                .nav-slider .slider .arrow-cont {
-                                    /* top: 80px; */
-                                    left: 50%;
-                                    transform: translateX(-50%);
-                                    /* bottom: -80px; */
-                                    width: 100%;
-                                    /* max-width: 80px; */
-                                }
-                                @media (min-width: 1025px) {
-
-                                }
-                            </style>
+                                <style>
+                                    .nav-slider {
+                                        margin-bottom: 40px;
+                                    }
+                
+                                    .shared-detail .nav-slider {
+                                        margin-bottom: 0;
+                                    }
+                
+                                    .nav-slider .title-cont {
+                                        text-align: center;
+                                        margin-bottom: 20px;
+                                    }
+                
+                                    .nav-slider .title-cont h2 {
+                                        position: relative;
+                                        display: inline-block;
+                                        padding: 0 25px;
+                                        font-size: 40px;
+                                        font-weight: 700;
+                                        line-height: 44px;
+                                        margin: 0;
+                                    }
+                
+                                    .nav-slider .title-cont h2::after {
+                                        content: "";
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        width: 100%;
+                                        height: 12px;
+                                        border-radius: 15px;
+                                        background-color: #fcf6e9;
+                                        z-index: -1;
+                                    }
+                
+                                    .nav-slider .slider {
+                                        position: relative;
+                                        padding: 20px 0 60px;
+                                        max-width: 1180px;
+                                    }
+                
+                                    .nav-slider .slider::after {
+                                        content: "";
+                                        position: absolute;
+                                        top: 0;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        height: 100%;
+                                        width: 50%;
+                                        max-width: 165px;
+                                        background-color: #fcf6e9;
+                                        z-index: -1;
+                                    }
+                
+                                    .nav-slider .slider .arrow-cont {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: flex-end;
+                                        padding-bottom: 12px;
+                                    }
+                
+                                    .nav-slider .slider .arrow-cont .inner {
+                                        display: flex;
+                                        align-items: center;
+                                    }
+                
+                                    .nav-slider .slider .arrow-cont .slick-prev,
+                                    .nav-slider .slider .arrow-cont .slick-next {
+                                        background-color: #e9a32e;
+                                    }
+                
+                                    .nav-slider .slider .arrow-cont .slick-prev i,
+                                    .nav-slider .slider .arrow-cont .slick-next i {
+                                        color: white;
+                                    }
+                
+                                    .nav-slider .slider .arrow-cont .slick-prev {
+                                        margin-right: 15px;
+                                    }
+                
+                                    .nav-slider .slider .slick-list {
+                                        padding-top: 10px;
+                                    }
+                
+                                    .nav-slider .item {
+                                        position: relative;
+                                        margin-bottom: 15px;
+                                        padding: 0 15px;
+                                    }
+                
+                                    .nav-slider .item .img-cont {
+                                        position: relative;
+                                        padding: 8px;
+                                        background-color: white;
+                                        border-radius: 8px;
+                                        box-shadow: -4px 8px 22px -3px rgba(0,0,0,0.15), 4px -2px 22px -3px rgba(0,0,0,0.15);
+                                    }
+                
+                                    .nav-slider .item .img-cont::after {
+                                        content: "";
+                                        position: absolute;
+                                        top: 8px;
+                                        left: 8px;
+                                        width: calc(100% - 16px);
+                                        height: calc(100% - 16px);
+                                        border-radius: 8px;
+                                        background: rgba(0,0,0,0.2);
+                                    }
+                
+                                    .nav-slider .item .img-cont img {
+                                        display: block;
+                                        width: 100%;
+                                        border-radius: 8px;
+                                    }
+                
+                                    .nav-slider .item .title {
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                    }
+                
+                                    .nav-slider .item .title h3 {
+                                        color: white;
+                                        margin: 0;
+                                        font-size: 26px;
+                                        line-height: 26px;
+                                    }
+                
+                                    @media (min-width: 1025px) {
+                                        .nav-slider {
+                                            margin-bottom: 100px;
+                                        }
+                                        .nav-slider .title-cont h2 {
+                                            font-size: 56px;
+                                            line-height: 66px;
+                                        }
+                                    }    
+                                </style>
                             <div class="title-cont">
                                 <h2>explore</h2>
                             </div>
@@ -311,7 +382,7 @@
                                     var root = $(".nav-slider");
                                     var slider = root.find(".slider");
                                     var arrows = root.find(".arrow-cont .inner");
-
+            
                                     slider.slick({
                                         autoplay: false,
                                         infinite: true,
@@ -355,10 +426,6 @@
                     </script>
 
                     <!-- END LISTINGS -->
-
-
-                </div>
-                <!--panel-one-col-->
             </div>
             <!--maincont-->
         </section>

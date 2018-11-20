@@ -17,3 +17,24 @@
 .add-this-panel .add-this i {
     margin-left: 5px;
 }
+
+.shared-detail .add-this {
+    font-size: 15px;
+    color: #363b47;
+}
+
+.shared-detail .add-this i {
+    color: #1072ba;
+}
+
+.shared-detail .add-this-panel {
+    margin-bottom: 0;
+}
+
+@media (min-width: 641px) {
+    .shared-detail .add-this-panel {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

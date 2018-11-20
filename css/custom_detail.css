@@ -1,17 +1,26 @@
 /* Shared Details */
-
-/*
-font-family: 'Roboto', sans-serif;
-font-family: 'Quicksand', sans-serif;
-*/
-
+.shared-detail {
+    margin-bottom: 50px;
+}
 .header-background {
-	background: url("../includes/public/assets/images/hdr-detail-sm.jpg") center/cover no-repeat;
-	padding-bottom: 80%;
+    min-height: 300px;
+}
+
+@media (min-width: 641px) {
+    .header-background {
+        min-height: 435px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .shared-detail {
+        margin-bottom: 140px;
+    }
 }
 
 .shared-top,
 .shared-bottom {
+    width: 100%;
 	max-width: 1060px;
 	margin: 0 auto;
 }
@@ -19,13 +28,15 @@ font-family: 'Quicksand', sans-serif;
 /* Shared Top */
 
 .shared-top .shared-info-cont {
+    position: relative;
 	padding: 0 15px;
-	/* margin-top: -150px; */
-    margin-top: -50%;
-   	z-index: 200;
+    margin-top: -160px;
  }
 
 .shared-top .shared-info-cont .shared-back-button {
+    position: absolute;
+    top: -25px;
+    left: 15px;
     font-family: 'Roboto', sans-serif;
 	font-size: 17px;
 	font-weight: 500;
@@ -34,11 +45,6 @@ font-family: 'Quicksand', sans-serif;
 
 .shared-top .shared-info-cont .shared-back-button .fa-caret-left {
 	margin-right: 3px;
-}
-
-.shared-top .shared-gallery {
-	max-width: 600px;
-    margin-top: 5px;
 }
 
 .shared-top .details .details-inner {
@@ -50,19 +56,8 @@ font-family: 'Quicksand', sans-serif;
 	align-self: flex-end;
 }
 
-.shared-top .details .share .add-this {
-	font-size: 15px;
-    font-family: 'Roboto', sans-serif;
-    color: #363b47;
-}
-
-.shared-top .details .share .add-this i {
-	color: #1072ba;
-}
-
 .shared-top .details h2 {
 	font-size: 30px;
-	padding-top: 15px;
     margin-bottom: 10px;
 	text-align: center;
 	letter-spacing: 1px;
@@ -71,9 +66,10 @@ font-family: 'Quicksand', sans-serif;
 .shared-top .details .info {
 	list-style: none;
 	margin: 0;
-	font-size: 17px;
+    font-size: 18px;
+    font-weight: 500;
 	text-align: center;
-	line-height: 20px;
+	line-height: 23px;
 }
 
 .shared-top .weblink a {
@@ -102,10 +98,17 @@ font-family: 'Quicksand', sans-serif;
 	cursor: pointer;
 }
 
+@media (min-width: 641px) {
+    .shared-top .details h2 {
+        line-height: 38px;
+        margin: 0;
+    }
+}
+
 /* Shared Gallery */
 .shared-gallery .gallery-item {
 	border: 7px solid #f3faff;
-	box-shadow: 0 3px 48px 15px rgba(0,0,0,0.1);
+	box-shadow: 0 3px 24px rgba(0,0,0,0.1);
 }
 
 .shared-gallery .gallery-item img {
@@ -113,32 +116,47 @@ font-family: 'Quicksand', sans-serif;
     width: 100%;
 }
 
+.detail-social {
+    padding: 10px 0 15px;
+}
 
+@media (min-width: 641px) {
+    .detail-social {
+        padding: 10px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
 
-@media (min-width: 680px) {
-	.header-background {
-		background: url("../includes/public/assets/images/hdr-detail.jpg") center/cover no-repeat;
-		padding-bottom: 30%;
-	}
+@media (min-width: 1025px) {
+    .detail-social {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 641px) {
 	.shared-top {
 		margin-bottom: 40px;
 	}
 	.shared-top .shared-info-cont {
 		display: flex;
-		margin-top: -20%;
+        margin-top: -200px;
 	}
 	.shared-top .shared-info-inner {
 		width: 48%;
 	}
 	.shared-top .details {
 		position: relative;
-		width: 52%;
+        width: 52%;
+        display: inline-block;
+        margin-top: auto;
+        height: 100%;
 	}
 	.shared-top .details .details-inner {
-		position: absolute;
-	    bottom: 0;
-		width: 100%;
-		padding-left: 35px;
+        padding: 20px 15px 0 35px;
 	    background-color: #fff;
 		border-top-right-radius: 10px;
 	}
@@ -156,35 +174,33 @@ font-family: 'Quicksand', sans-serif;
 		text-align: left;
 		padding-top: 0;
 	}
-	.shared-top .details .detail-booking {
-		margin: 20px 0;
-	}
 }
-
-/* @media (min-width: 1120px and max-width: 1268px) {
-	.shared-top .shared-info-cont {
-		margin-top: -200px;
-	}
-} */
 
 @media (min-width: 1025px) {
 	.shared-top {
 		margin-bottom: 120px;
 	}
 	.shared-top .shared-info-cont {
-    	margin-top: -27%;
+    	margin-top: -260px;
 	}
 	.shared-top .details h2 {
-		font-size: 40px;
-		line-height: 42px;
-		letter-spacing: 3px;
+		font-size: 42px;
+		line-height: 44px;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
 	}
 	.shared-top .details .info {
-		font-size: 22px;
+		font-size: 23px;
 		line-height: 28px;
 	}
 	.shared-gallery .gallery-item {
 		border: 12px solid #f3faff;
+    }
+    .shared-top .details .details-inner {
+        padding: 30px 15px 10px 35px;
+    }
+    .shared-top .details .detail-booking {
+		margin: 0 0 0 auto;
 	}
 }
 
@@ -198,11 +214,16 @@ font-family: 'Quicksand', sans-serif;
 	margin-bottom: 35px;
 }
 
+.shared-bottom .detail-tab p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
 .shared-bottom .detail-tab .tab-inner {
 	position: relative;
 	display: flex;
 	justify-content: space-between;
-	padding: 8px 20px;
+	padding: 8px 15px;
 	background-color: #dfe6ea;
 	border-radius: 5px;
 }
@@ -228,6 +249,7 @@ font-family: 'Quicksand', sans-serif;
 	align-items: center;
 	width: 30px;
     cursor: pointer;
+    margin-left: auto;
 }
 
 .shared-bottom .detail-tab .tab-inner .toggle i {
