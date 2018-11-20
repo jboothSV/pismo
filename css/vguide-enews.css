@@ -1,4 +1,5 @@
 .vguide-panel {
+    position: relative;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -62,6 +63,7 @@
 .vguide .content h5,
 .enews .content h5 {
     font-size: 20px;
+    line-height: 18px;
 }
 
 .vguide .content h6,
@@ -73,14 +75,14 @@
 @media (min-width: 720px) {
     .footer-section .vguide-panel {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         margin: 0 auto 30px;
         border-bottom: 1px solid white;
         width: 100%;
     }
     .vguide-panel .vguide,
     .vguide-panel .enews {
-        width: calc(50% - 40px);
+        width: calc(50% - 35px);
         padding-bottom: 25px;
     }
     .vguide-panel::after {
@@ -95,16 +97,19 @@
     }
     .vguide-panel .vguide {
         border: 0;
-        margin-right: 35px;
+        padding-right: 35px;
         margin-bottom: 0;
     }
     .vguide-panel .enews {
-        margin-left: 35px;
+        padding-left: 35px;
         margin-bottom: 0;
     }
     .vguide .icon, 
     .enews .icon {
         flex: 0 0 50px;
+    }
+    .vguide .icon {
+        padding-top: 5px;
     }
     .enews .content,
     .vguide .content {
@@ -120,21 +125,51 @@
     }
     .vguide .content h5, 
     .enews .content h5 {
-        font-size: 28px;
-    }
-    .vguide .content h6, 
-    .enews .content h6 {
-        font-size: 18px;
-    }
-}
-
-@media (min-width: 1025px) {
-    .vguide .content h5, 
-    .enews .content h5 {
-        font-size: 26px;
+        font-size: 23px;
+        line-height: 28px;
     }
     .vguide .content h6, 
     .enews .content h6 {
         font-size: 16px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .footer-section .vguide-panel {
+        border: 0;
+    }
+    .footer-section .vguide-panel::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 90%;
+        transform: translateX(-50%);
+        height: 1px;
+        background-color: white;
+    }
+    .vguide,
+    .enews {
+        padding-top: 35px;
+        transition: background-color 0.5s;
+    }
+    .vguide .icon, 
+    .enews .icon {
+        flex: 0 0 60px;
+    }
+    .footer-section .vguide-panel {
+        justify-content: center;
+    }
+    .vguide .content h5, 
+    .enews .content h5 {
+        font-size: 28px;
+    }
+    .vguide .content h6, 
+    .enews .content h6 {
+        font-size: 16px;
+    }
+    .vguide:hover,
+    .enews:hover {
+        background-color: rgba(16, 114, 186, 0.85);
     }
 }

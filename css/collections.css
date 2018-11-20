@@ -73,6 +73,15 @@
     margin: 0 auto 25px;
 }
 
+.two-col-slider .item .img-cont .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    cursor: pointer;
+}
+
 .two-col-slider .item .img-cont img {
     display: block;
     width: 100%;
@@ -123,11 +132,18 @@
     .two-col-slider .slider .slick-list {
         padding: 15px 0;
     }
+    .two-col-slider::after {
+        background: url("../includes/public/assets/images/slider-bg.png")left bottom/cover no-repeat;
+    }
+    .two-col-slider .arrow-cont .slick-prev {
+        margin-right: 5px;
+    }
 }
 
 @media (min-width: 1025px) {
     .two-col-slider {
-        padding-bottom: 100px;
+        padding-bottom: 120px;
+        margin-bottom: 160px;
     }
     .two-col-slider .item .content {
         padding-left: 50px;
@@ -137,6 +153,9 @@
     }
     .two-col-slider .item .img-cont {
         padding: 10px;
+    }
+    .two-col-slider .item .img-cont .play-btn {
+        width: 80px;
     }
 }
 
@@ -173,7 +192,7 @@
 
 .highlight-slider .item .img-cont {
     position: relative;
-    padding: 5px;
+    padding: 8px;
     border-radius: 8px;
     background-color: white;
     margin-bottom: 25px;
@@ -188,10 +207,10 @@
 .highlight-slider .item .img-cont::after {
     content: "";
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
+    top: 8px;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
     background-color: rgba(0,0,0,0.25);
 }
 
@@ -328,6 +347,7 @@
     .highlight-slider .item .title h2 {
         font-size: 40px;
         line-height: 44px;
+        letter-spacing: 2px;
     }
     .highlight-slider .arrow-cont .view-more:hover {
         background-color: white;
@@ -346,7 +366,7 @@
 
 .article-imgboxes .title-cont {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .article-imgboxes .title-cont h2 {
@@ -354,7 +374,7 @@
     display: inline-block;
     padding: 0 25px;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 44px;
     margin: 0;
 }
@@ -402,6 +422,7 @@
     color: white;
     font-family: "Quicksand", sans-serif;
     font-size: 12px;
+    font-weight: 500;
     text-transform: uppercase;
     text-align: center;
     transform: translateY(-50%);
@@ -414,8 +435,8 @@
 }
 
 .article-imgbox .content h4 {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 17px;
+    line-height: 27px;
     color: #64656a;
     margin: 0;
 }
@@ -447,7 +468,7 @@
 
 @media (min-width: 1025px) {
     .article-imgboxes {
-        margin-bottom: 220px;
+        margin-bottom: 230px;
         padding: 0 40px;
     }
     .article-imgboxes .imgbox-cont {
@@ -458,7 +479,7 @@
         margin: 0 40px;
     }
     .article-imgboxes .title-cont {
-        margin-bottom: 60px;
+        margin-bottom: 70px;
     }
     .article-imgboxes .title-cont h2 {
         font-size: 58px;
@@ -491,7 +512,7 @@
     }
     .article-imgbox:hover .img-cont::before {
         transition: opacity 0.4s;
-        opacity: 0.3;
+        opacity: 0.6;
     }
     .article-imgbox .content {
         position: absolute;
@@ -541,7 +562,7 @@
 
 .feat-slider .title-cont {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .feat-slider .title-cont h2 {
@@ -549,7 +570,7 @@
     display: inline-block;
     padding: 0 25px;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 44px;
     margin: 0;
 }
@@ -746,6 +767,9 @@
     .feat-slider .slider-inner {
         padding-bottom: 65px;
     }
+    .feat-slider .slider-inner.controlled-width {
+        max-width: 1160px;
+    }
     .feat-slider .item {
         padding: 0 10px;
     }
@@ -772,6 +796,7 @@
     position: relative;
     margin-bottom: 35px;
     box-shadow: -14px 11px 95px -34px rgba(0,0,0,0.73);
+    height: 100%;
 }
 
 .feat-imgbox .img-cont img {
@@ -867,16 +892,18 @@
     }
     .feat-imgbox .content .stnd-btn {
         margin-right: auto;
+        align-self: flex-start;
     }
     .feat-imgbox.alternate .content .stnd-btn {
         margin-left: auto;
         margin-right: 0;
+        align-self: flex-end;
     }
 }
 
 @media (min-width: 1025px) {
     .feat-imgbox {
-        margin-bottom: 125px;
+        margin-bottom: 85px;
     }
     .feat-imgbox .content {
         padding-left: 50px;
@@ -887,12 +914,20 @@
         padding-left: 15px;
     }
     .feat-imgbox .content h3 {
-        font-size: 46px;
+        font-size: 48px;
         line-height: 56px;
+    }
+    .feat-imgbox .content h6 {
+        font-size: 24px;
     }
     .feat-imgbox .content p {
         line-height: 28px;
         margin-bottom: 20px;
+    }
+    .feat-imgbox.alternate .img-cont::after {
+        width: 115%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -915,6 +950,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 55px;
+    cursor: pointer;
+}
+
+.video-box .img-cont .play-btn img {
+    display: block;
+    width: 100%;
 }
 
 .video-box .img-cont::after {
@@ -958,12 +999,12 @@
         bottom: 0;
         right: 0;
         width: 45%;
-        padding: 25px;
+        padding: 25px 35px;
         border-top-left-radius: 8px;
         box-shadow: -14px 11px 95px -34px rgba(0,0,0,0.73);
     }
     .video-box .img-cont .play-btn {
-        width: 75px;
+        width: 85px;
     }
     .video-box .img-cont::after {
         height: 20px;
@@ -980,7 +1021,7 @@
 
 .nav-slider .title-cont {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .nav-slider .title-cont h2 {
@@ -988,7 +1029,7 @@
     display: inline-block;
     padding: 0 25px;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 44px;
     margin: 0;
 }
@@ -1009,6 +1050,7 @@
 .nav-slider .slider {
     position: relative;
     padding: 20px 0 60px;
+    max-width: 1180px;
 }
 
 .nav-slider .slider::after {
@@ -1105,8 +1147,11 @@
 }
 
 @media (min-width: 1025px) {
+    .nav-slider {
+        margin-bottom: 100px;
+    }
     .nav-slider .title-cont h2 {
-        font-size: 58px;
+        font-size: 56px;
         line-height: 66px;
     }
 }
@@ -1118,6 +1163,9 @@
 .spotlight-panel {
     margin-bottom: 40px;
     padding: 0 15px;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
 }
 
 .spotlight-panel .inner {
@@ -1153,7 +1201,7 @@
 }
 
 .spotlight-item .content p a {
-    font-size: 16px;
+    font-size: 15px;
     text-transform: uppercase;
 }
 

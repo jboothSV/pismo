@@ -40,6 +40,7 @@
 
 .header-slideshow-int .item .title h4 {
     color: white;
+    margin-bottom: 0;
 }
 
 @media (min-width: 641px) {

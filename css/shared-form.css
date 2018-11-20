@@ -66,6 +66,10 @@
     font-size: 22px;
 }
 
+.header-section .mobilenav .shared-submit i {
+    font-size: 18px;
+}
+
 .header-section .mobilenav .shared-submit {
     height: 40px;
     width: 50px;
@@ -75,11 +79,13 @@
 .filters .shared-input,
 .filters .shared-input[type] {
     flex: 4;
+    min-width: calc(80% - 5px); /*firefox fix*/
     margin: 0;
     height: inherit;
     line-height: 35px;
     margin-right: 5px;
     padding: 0 15px;
+    font-size: 15px;
 }
 
 .filters .shared-input:focus,
@@ -90,6 +96,7 @@
 
 .filters .shared-submit {
     flex: 1;
+    min-width: 20%;
 }
 
 .filters .shared-form {

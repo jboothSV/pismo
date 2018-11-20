@@ -14,7 +14,7 @@
 }
 
 .nav-primary .primary-item {
-    margin-right: 30px;
+    margin-right: 27px;
 }
 
 .nav-primary .primary-item:last-child {
@@ -93,12 +93,18 @@
     top: 100%;
     width: 100%;
     max-width: 800px;
-    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(0,0,0,0.65);
     padding: 20px 30px;
 }
 
 .nav-primary .primary-item:nth-child(-n+2) .dropdown {
-    left: 0;
+    left: 100px;
+}
+
+@media (max-width: 1250px) {
+    .nav-primary .primary-item:nth-child(-n+2) .dropdown {
+        left: 0;
+    }
 }
 
 .nav-primary .primary-item:nth-child(3) .dropdown {
@@ -327,9 +333,16 @@
 }
 
 .header-section .translate-cont {
+    position: relative;
     display: flex;
     align-items: center;
     color: white;
+    pointer-events: all;
+}
+
+.header-section .translate-cont .controls {
+    position: relative;
+    padding-right: 15px;
 }
 
 .header-section .translate-cont .fa-globe {
@@ -532,8 +545,9 @@
 
 .mobilenav .primary-item a {
     font-family: "Quicksand", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 18px;
+    line-height: 28px;
     text-transform: uppercase;
     color: white;
 }
@@ -599,6 +613,7 @@
 .mobilenav .nav-list.industry a {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
+    line-height: 23px;
     font-weight: 400;
     text-transform: uppercase;
     color: white;

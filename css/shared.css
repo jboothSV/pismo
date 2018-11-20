@@ -204,6 +204,16 @@ dl {
         line-height: 34px;
     }
 }
+@media (min-width: 1025px) {
+    h1 {
+        font-size: 65px;
+        line-height: 65px;
+    }
+    h2 {
+        font-size: 56px;
+        line-height: 56px;
+    }
+}
 ul { margin-left: 1.8em; }
 .wrapper img { border: medium none; }
 .wrapper .ui-datepicker select { padding: 0; }
@@ -249,7 +259,7 @@ ul { margin-left: 1.8em; }
     height: 90px;
     width: 100%;
     margin: 0 auto;
-    background-color: rgba(0,0,0,0.25);
+    background-color: rgba(0,0,0,0.45);
     padding: 0 60px 0 15px;
 }
 
@@ -294,6 +304,23 @@ ul { margin-left: 1.8em; }
     height: calc(50% - 10px);
 }
 
+.header-section .translate-select {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 140px;
+    z-index: 1;
+    background-image: none;
+    padding-top: 27px;
+    background: transparent;
+    border: 0;
+}
+
+.header-section .translate-select:focus {
+    outline: none;
+}
+
 @media (max-width: 1024px) {
     .header-section {
         height: 65px;
@@ -321,7 +348,7 @@ ul { margin-left: 1.8em; }
 
 .controlled-width {
     width: 100%;
-    max-width: 1170px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -478,6 +505,7 @@ ul { margin-left: 1.8em; }
 
 .intro-panel h1 {
     margin-bottom: 30px;
+    font-weight: 500;
 }
 
 @media (min-width: 1025px) {
@@ -491,9 +519,8 @@ ul { margin-left: 1.8em; }
         padding-left: 85px;
     }
     .intro-panel h1 {
-        width: 50%;
-        font-size: 65px;
-        line-height: 70px;
+        font-size: 72px;
+        line-height: 78px;
     }
 }
 
@@ -571,6 +598,9 @@ ul { margin-left: 1.8em; }
     display: flex;
     flex-direction: column;
     padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer-section .flex-wrapper {
@@ -605,7 +635,7 @@ ul { margin-left: 1.8em; }
 
 .footer-section .address h6 {
     color: white;
-    font-size: 17px;
+    font-size: 16px;
     margin: 0;
 }
 
@@ -663,11 +693,22 @@ ul { margin-left: 1.8em; }
     .footer-section .address ul li {
         line-height: 21px;
     }
+    .footer-section .footer-bottom .controlled-width {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-section .footer-bottom span {
+        display: inline;
+    }
+    .footer-section .footer-bottom img {
+        margin: 0;
+    }
 }
 
 @media (min-width: 1025px) {
     .footer-section .footer-top {
-        padding: 35px 15px 15px;
+        padding: 0 15px 15px;
     }
     .footer-section .main-flex-wrapper {
         display: flex;
@@ -683,14 +724,6 @@ ul { margin-left: 1.8em; }
     }
     .footer-section .footer-bottom {
         padding: 15px;
-    }
-    .footer-section .footer-bottom .controlled-width {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .footer-section .footer-bottom span {
-        display: inline;
     }
     .footer-section .footer-bottom img {
         margin: 0;
